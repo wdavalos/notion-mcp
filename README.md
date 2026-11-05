@@ -32,6 +32,8 @@ Notion MCP wraps the [Notion Printing Press CLI](https://github.com/mvanhorn/pri
 
 Run it on the Apify Store: https://apify.com/red.cars/notion-mcp
 
+Details and docs: https://scraperfleet.com/actors/notion-mcp/
+
 To pull the source locally:
 
 ```bash
