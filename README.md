@@ -184,7 +184,42 @@ MCP calls return results in the response itself. Direct invocation also pushes e
 **Is there a free way to try it?**
 Yes. Open the actor on the Apify Store and use the input field for a single direct tool call, or call `tools/list` over MCP to see the full tool list for free.
 
+**B2B Lead Generation Suite MCP** ([apify.com/red.cars/b2b-lead-gen-suite-mcp](https://apify.com/red.cars/b2b-lead-gen-suite-mcp)) — enrich leads in the suite, then write each one into a Notion database as a page.
+
 ## Direct API Invocation
+
+You can also call tools directly via HTTP without MCP:
+
+```bash
+curl -X POST "https://api.apify.com/v2/acts/FwmemTEAo83gbAj9N/runs" \
+  -H "Authorization: Bearer $APIFY_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{ "tool": "search", "args": { "query": "roadmap" } }'
+```
+
+The run runs one tool call, bills its event, pushes the result to the run's dataset, and exits.bash
+# Install dependencies
+npm install
+
+# Build TypeScript
+npm run build
+
+# Run locally (requires Apify SDK)
+node dist/main.js
+
+# Test with MCP protocol
+echo '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{}}' | notion-pp-mcp
+```
+
+## GitHub Topics
+
+`notion` `mcp` `mcp-server` `notion-api` `ai-agents`
+
+## Support
+
+- **Issues**: https://github.com/wdavalos/notion-mcp/issues
+- **Apify**: https://apify.com/red.cars/notion-mcp
+- **Notion PP CLI**: https://github.com/mvanhorn/printing-press-library## Direct API Invocation
 
 You can also call tools directly via HTTP without MCP:
 
